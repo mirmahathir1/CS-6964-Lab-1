@@ -1,0 +1,28 @@
+version: "3.1"
+
+services:
+  jupyter:
+    build:
+      context: ./jupyter
+      dockerfile: Dockerfile
+    volumes:
+      - ./jupyter:/lab1
+    ports:
+      - 8888:8888
+
+  db:
+    build:
+      context: ./postgres
+      dockerfile: Dockerfile
+    restart: always
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres
+    ports:
+      - 5432:5432
+
+volumes:
+  pgdata:

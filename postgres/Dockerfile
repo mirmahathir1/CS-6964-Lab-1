@@ -1,6 +1,6 @@
 # PostgreSQL Dockerfile
 
-FROM postgres:latest
+FROM postgres:17
 
 # Create a directory to store initialization scripts
 RUN mkdir -p /docker-entrypoint-initdb.d

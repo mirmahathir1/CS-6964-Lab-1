@@ -6,7 +6,7 @@ https://github.com/git-guides/install-git
 To get the lab1 files, use the following command
 
 ```bash
-git clone https://github.com/pavitramehra/cs6964_lab1.git
+git clone https://github.com/mirmahathir1/CS-6964-Lab-1.git
 cd cs6964_lab1
 ```
 
